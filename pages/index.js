@@ -37,6 +37,12 @@ export default function Home({ allPostsData }) {
                   ))}
               </ul>
           </section>
+          <section>
+              <h2 className={utilStyles.headingLg}>Little Game</h2>
+              <Link href={`/fun/yes-or-no`}>
+                  <a>Yes or No</a>
+              </Link>
+          </section>
       </Layout>
   )
 }
