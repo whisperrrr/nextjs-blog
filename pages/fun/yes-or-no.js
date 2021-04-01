@@ -2,8 +2,7 @@ import React from "react";
 import styles from "./yes-or-no.module.css";
 
 export async function getStaticProps() {
-    const res = await fetch('https://yesno.wtf/api')
-    const data = await res.json()
+    const data = getRandomAnswer();
 
     if (!data) {
         return {
@@ -13,6 +12,11 @@ export async function getStaticProps() {
     return {
         props: {data},
     }
+}
+
+const getRandomAnswer = () => {
+    const randomNum = Math.random();
+    return randomNum > 0.5 ? {answer: "Yes"} : {answer: "No"};
 }
 
 const yesOrNo = ({data}) => {
