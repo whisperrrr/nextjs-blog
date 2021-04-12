@@ -60,16 +60,13 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(1, 1, 1, 0),
         paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
         transition: theme.transitions.create('width'),
-        width: '100%',
+        width: '90px',
         [theme.breakpoints.up('md')]: {
             width: '20ch',
         },
     },
-    sectionDesktop: {
-        display: 'none',
-        [theme.breakpoints.up('md')]: {
-            display: 'flex',
-        },
+    appBarIcon: {
+        display: 'flex',
     },
 }));
 
@@ -97,7 +94,7 @@ export default function PrimarySearchAppBar() {
                         />
                     </div>
                     <div className={classes.grow}/>
-                    <div className={classes.sectionDesktop}>
+                    <div className={classes.appBarIcon}>
                         <IconButton title="Blog" aria-label="Blog" color="secondary">
                             <BookOutlinedIcon/>
                         </IconButton>
