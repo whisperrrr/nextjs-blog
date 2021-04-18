@@ -5,7 +5,7 @@ import styles from "../styles/home.module.css";
 
 export default function Home() {
     return (
-        <Layout home secondHome>
+        <Layout home>
             <section className={styles.mainContainer}>
                 <Typography className={styles.quote} variant="h1">CHASING STAR</Typography>
             </section>

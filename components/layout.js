@@ -9,7 +9,7 @@ const PrimarySearchAppBar = dynamic(() => import("./PrimarySearchAppBar"), {
 
 export const siteTitle = '💌'
 
-export default function Layout({children, secondHome, home}) {
+export default function Layout({children, home}) {
     return (
         <div className={styles.container}>
             <Head>
@@ -29,13 +29,6 @@ export default function Layout({children, secondHome, home}) {
             </Head>
             <PrimarySearchAppBar/>
             <main className={home? styles.homeMain: styles.main}>{children}</main>
-            {!secondHome && (
-                <div className={styles.backToHome}>
-                    <Link href="/blog">
-                        <a>← Back to home</a>
-                    </Link>
-                </div>
-            )}
         </div>
     )
 }
