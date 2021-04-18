@@ -9,7 +9,7 @@ const PrimarySearchAppBar = dynamic(() => import("./PrimarySearchAppBar"), {
 
 export const siteTitle = '💌'
 
-export default function Layout({children, home}) {
+export default function Layout({children, secondHome, home}) {
     return (
         <div className={styles.container}>
             <Head>
@@ -28,8 +28,8 @@ export default function Layout({children, home}) {
                 <meta name="twitter:card" content="summary_large_image"/>
             </Head>
             <PrimarySearchAppBar/>
-            <main className={styles.main}>{children}</main>
-            {!home && (
+            <main className={home? styles.homeMain: styles.main}>{children}</main>
+            {!secondHome && (
                 <div className={styles.backToHome}>
                     <Link href="/blog">
                         <a>← Back to home</a>

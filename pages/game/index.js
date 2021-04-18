@@ -6,7 +6,7 @@ import React from "react";
 
 export default function Game() {
     return (
-        <Layout home>
+        <Layout secondHome>
             <Head>
                 <title>{siteTitle}</title>
             </Head>
